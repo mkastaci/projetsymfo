@@ -1,0 +1,784 @@
+
+body{
+    font-family: 'Roboto','Noto Sans', sans-serif;
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+i{
+    margin-right: 0.2em;
+}
+
+/*----------------------PARTIE HEADER-----------------------*/
+header{
+    background: url("/image/banner.jpg");
+    height: 38em;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+#titrep{
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    top: 1.5em;
+    
+}
+
+#titrep h1{
+    font-size: 2em;
+    font-family: "Times New Roman";
+    font-weight: 900;
+    text-transform: uppercase;
+    color: rgb(255, 255, 255);
+    letter-spacing: 0.25em;
+}
+
+#titrep p{
+    color: rgba(255, 255, 255, 0.5);
+    text-transform: uppercase;
+    display: block;
+    letter-spacing: 0.2em;
+    font-size: 0.5em;
+    margin: 1.25em 0px 0px
+}
+
+
+#navbar{
+    position: absolute;
+    top: 2.5em;
+    width: 100%;
+    text-align: center;
+    
+}
+
+#navbar ul{
+    display: inline-block;
+    border-radius: 0.35em;
+    box-shadow: inset 0px 0px 1px 1px rgba(255, 255, 255, 0.25);
+    padding: 0 1.5em 0 1.5em;
+}
+
+#navbar li{
+    display: inline-block;
+    
+    padding: 0 1.5em 0 1.5em;
+}
+
+#navbar li a{
+    display: block;
+    color: rgba(255, 255, 255, 0.75);
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 0.7em;
+    letter-spacing: 0.25em;
+    height: 5em;
+    line-height: 5em;
+    transition: all .25s ease-in-out;
+}
+
+#navbar li a:hover{
+    transform: translate(5px, 5px);
+}
+
+/*----------------------PARTIE body intro-----------------------*/
+#intro{
+    color: rgba(255, 255, 255, 0.75);
+    background: url("/image/overlay.png") rgb(233, 119, 112);
+    position: relative;
+    padding: 2em 0;
+}
+
+.titreintro{
+    color: #fff;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    line-height: 3em;
+    font-size: 0.9em;
+    background: url("/image/overlay.png") rgb(233, 119, 112);
+    position: absolute;
+    padding: 1em 2em;
+    left: 40%;
+    top: -3.25em;
+    height: 3.25em;
+    right: 40%;
+}
+
+p.titreintro:before{
+    content: '';
+    position: absolute;
+    bottom: -38px;
+    left: -35px;
+    width: 35px;
+    height: 38px;
+    background: url("/image/shadow.png");
+}
+
+p.titreintro:after{
+    transform: scaleX(-1);
+    content: '';
+    position: absolute;
+    bottom: -38px;
+    right: -35px;
+    width: 35px;
+    height: 38px;
+    background: url("/image/shadow.png");
+}
+
+.texteintro{
+    color: white;
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
+    padding: 2em;
+
+}
+
+.texteintro p{
+    line-height: 20px;
+}
+
+.texteintro h1{
+    border: 1px solid #414752;;
+    border-radius: 10px;
+    font-size: 2em;
+    padding: 1.3em 0.6em;
+    margin: .8em 0;
+    font-weight: bold;
+    
+
+}
+
+.buttonintro{
+    color: #414752;
+    margin: 2em 0 3em;
+    display: flex;
+    justify-content: center;  
+}
+
+.buttonintro a:nth-child(1) { 
+    animation-name: slideright;
+    animation-duration: 1s;
+}
+
+.buttonintro a:nth-child(2) { 
+	animation-name: slideleft;
+    animation-duration: 1s;
+}
+
+
+.buttonintro >a{
+    margin-right: 0.2em;
+}
+.buttonintro a{
+    border: 1px solid #414752;
+    border-radius: 5px;
+    padding: 0.8em;
+    transition: all 1s;
+}
+
+.buttonintro a:hover{
+    color: white;
+    background-color: #414752;
+    transform: translate(-10px, -10px);
+    box-shadow: 1px 1px #272727, 2px 2px #272727, 3px 3px #272727, 4px 4px #272727, 5px 5px #272727, 6px 6px #272727, 7px 7px #272727, 8px 8px #272727;
+}
+
+/*----------------------PARTIE body bio-----------------------*/
+.bio{
+     background: url("/image/overlay.png") rgb(255, 255, 255);
+}
+#bio{
+   
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    padding: 2em 0 4em 0;
+}
+.titrebio{
+    color: #000;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    line-height: 3em;
+    font-size: 0.9em;
+    background: url("/image/overlay.png") rgb(255, 255, 255);
+    position: absolute;
+    padding: 1em 2em;
+    left: 40%;
+    top: -3.25em;
+    height: 3.25em;
+    right: 40%;
+}
+
+p.titrebio:before{
+    content: '';
+    position: absolute;
+    bottom: -38px;
+    left: -35px;
+    width: 35px;
+    height: 38px;
+    background: url("/image/shadow.png");
+}
+
+p.titrebio:after{
+    transform: scaleX(-1);
+    content: '';
+    position: absolute;
+    bottom: -38px;
+    right: -35px;
+    width: 35px;
+    height: 38px;
+    background: url("/image/shadow.png");
+}
+
+#bio img{
+    width: 100%;
+    margin: 2em 0;
+    border-radius: 10px;
+}
+ .competence{
+     margin: 2em 0;
+     width: 100%;
+     border: 1px solid grey;
+ }
+th,td{
+    border: 1px solid grey;
+    padding: 0.5em 0;
+}
+
+th{
+    background-color: #2C2F37;
+    color: white;
+    text-align: left;
+}
+
+#bio div{
+    border: none;
+}
+
+/*----------------------PARTIE body localisation-----------------------*/
+
+.titrelocalisation{
+    color: #fff;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    line-height: 3em;
+    font-size: 0.9em;
+    background: url("/image/overlay.png") #2C2F37;
+    position: absolute;
+    padding: 1em 2em;
+    left: 40%;
+    top: -3.25em;
+    height: 3.25em;
+    right: 40%;
+}
+
+p.titrelocalisation:before{
+    content: '';
+    position: absolute;
+    bottom: -38px;
+    left: -35px;
+    width: 35px;
+    height: 38px;
+    background: url("/image/shadow.png");
+}
+
+p.titrelocalisation:after{
+    transform: scaleX(-1);
+    content: '';
+    position: absolute;
+    bottom: -38px;
+    right: -35px;
+    width: 35px;
+    height: 38px;
+    background: url("/image/shadow.png");
+}
+
+#localisation{
+    background: url("/image/overlay.png") #2C2F37;
+    position: relative;
+    padding: 3em 0 5em 0;
+}
+
+.googlemap{
+    width: 90%;
+    display: block;
+    margin: 0 auto;
+}
+
+/*----------------------PARTIE body work-----------------------*/
+
+#work{
+    background: #f3f3f3 url("/image/overlay.png");
+    position: relative;
+    padding: 3em 0;
+}
+.titrework{
+    color: #484D55;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    line-height: 3em;
+    font-size: 0.9em;
+    background: url("/image/overlay.png") #f3f3f3;
+    position: absolute;
+    padding: 1em 2em;
+    left: 40%;
+    top: -3.25em;
+    height: 3.25em;
+    right: 40%;
+}
+
+p.titrework:before{
+    content: '';
+    position: absolute;
+    bottom: -38px;
+    left: -35px;
+    width: 35px;
+    height: 38px;
+    background: url("/image/shadow.png");
+}
+
+p.titrework:after{
+    transform: scaleX(-1);
+    content: '';
+    position: absolute;
+    bottom: -38px;
+    right: -35px;
+    width: 35px;
+    height: 38px;
+    background: url("/image/shadow.png");
+}
+
+
+.projet {
+    height: 300px;
+    display: flex;
+
+}
+
+.img{
+    width: 100%;
+    margin: 15px 0;
+    border: 20px solid white;
+    overflow: hidden;
+    position: relative;
+}
+
+.img:hover .descriptionwork{
+    padding-bottom: 30px;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.img img{
+    width: 100%;
+    height: 100%;
+    
+}
+
+.descriptionwork{
+    position: absolute;
+    background: rgba(0, 0, 0, 0.4);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: white;
+    padding: 15px 0;
+    transition: all 1s;
+}
+
+.descriptionwork p{
+    text-align: center;
+}
+
+.descriptionwork span{
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+
+.projet a{
+    background-color: #69D1E7;
+    padding: 0.5em;
+    width: 100%;
+    text-align:center;
+    color: white;
+    font-weight: bold;
+}
+
+
+/*----------------------PARTI CHAT---------------------------------*/
+
+#chat{
+    background: linear-gradient(to bottom, #91EAE4, #86A8E7, #7F7FD5);
+    position: relative;
+    padding: 3em 0 5em 0;
+    
+}
+.titrechat{
+    color: #000;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    line-height: 3em;
+    font-size: 0.9em;
+    background-color: #91EAE4;
+    position: absolute;
+    padding: 1em 2em;
+    left: 40%;
+    top: -3.25em;
+    height: 3.25em;
+    right: 40%;
+}
+
+p.titrechat:before{
+    content: '';
+    position: absolute;
+    bottom: -38px;
+    left: -35px;
+    width: 35px;
+    height: 38px;
+    background: url("/image/shadow.png");
+}
+
+p.titrechat:after{
+    transform: scaleX(-1);
+    content: '';
+    position: absolute;
+    bottom: -38px;
+    right: -35px;
+    width: 35px;
+    height: 38px;
+    background: url("/image/shadow.png");
+}
+
+
+.chatbox{
+    border-radius: 20px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+#messages{
+    height: 450px;
+    border-radius: 10px 10px 0 0;
+    background-color: rgba(0,0,0,0.4) !important;
+    overflow-wrap: break-word;
+    overflow-y: auto;
+}
+
+#formchat .chat_input_aera{
+    background-color: rgba(0,0,0,0.3) !important;
+    border-radius: 20px 0 0 20px;
+}
+
+#chatpseudo{
+    background-color: rgba(0,0,0,0.3) !important;
+    border-radius: 10px 10px 0 0;
+    margin-left: 20px;
+    border: none;
+}
+
+#envoi{
+    border-radius: 0 20px 20px 0;
+    background-color: rgba(0,0,0,0.3) !important;
+    color: white;
+    border: none;
+    border-left: 1px solid black;
+}
+
+
+
+#formchat{
+    border-radius: 0 0 10px 10px;
+    padding: 1em;
+    background-color: rgba(0,0,0,0.4) !important;
+}
+
+.pseudo{
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+    border-radius: 10px 10px 0 0;
+    margin-left: 15px;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.messageperso{
+    padding: 1em 1em 0.5em;   
+}
+
+.delete_message{
+    position: absolute;
+    right: 0;
+    top: 30%;
+    bottom: 30%;
+}
+
+.messageperso p{
+    position: relative;
+    padding: 0.8em 0.5em;
+    border: 1px solid black;
+    border-radius: 20px; 
+    position: relative;
+}
+
+.msg_date{
+    position: absolute;
+    left: 0;
+    bottom: -15px;
+    color: rgba(255,255,255,0.5);
+    font-size: 10px;
+}
+
+.info_form{
+    color: white;
+    font-size: .7em;
+}
+
+
+.chat_input_aera::placeholder, #chatpseudo::placeholder{
+    color: #6C757D;
+}
+
+.infoconnexion a{
+    color: rgb(224, 96, 96);
+}
+
+/*----------------------PARTIE body contact-----------------------*/
+#contact{
+    background: url("/image/overlay.png") #2C2F37;
+    position: relative;
+    padding: 2em;
+}
+
+.titrecontact{
+    color: #fff;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    line-height: 3em;
+    font-size: 0.9em;
+    background: url("/image/overlay.png") #2C2F37;
+    position: absolute;
+    padding: 1em 2em;
+    left: 40%;
+    top: -3.25em;
+    height: 3.25em;
+    right: 40%;
+}
+
+p.titrecontact:before{
+    content: '';
+    position: absolute;
+    bottom: -38px;
+    left: -35px;
+    width: 35px;
+    height: 38px;
+    background: url("/image/shadow.png");
+}
+
+p.titrecontact:after{
+    transform: scaleX(-1);
+    content: '';
+    position: absolute;
+    bottom: -38px;
+    right: -35px;
+    width: 35px;
+    height: 38px;
+    background: url("/image/shadow.png");
+}
+
+.containercontact{
+    display: flex;
+   
+}
+
+.containercontact .contactleft{
+    
+    padding: 3em 1em 0 0;
+    border-right: 1px solid white;
+    
+}
+
+.containercontact .contactright{
+    padding: 3em 1em 0 1em;
+    color: #fff;
+  
+   
+}
+
+.containercontact section{
+    width: 50%;
+}
+
+
+.contact-form{
+    width: 90%;
+    margin: 0 auto;
+}
+.contact-form div{
+    margin-bottom: 1em;
+
+    
+}
+
+.contact-gender {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contact-gender input[type="radio"]{
+    margin-right: 0.5em;
+}
+
+.contact-Nickname input, .contact-email input ,textarea, select{
+   font-family: 'Source Sans Pro', sans-serif;
+    font-size: 14pt;
+    letter-spacing: 0.025em;
+    width: 100%;
+    background-color: #ccc;
+    border: none;
+    padding: 1em 0 1em 0.5em;
+    border-radius: 0.35em;
+    transition: all .25s ease-in-out;
+}
+
+.contact-Nickname input:focus, .contact-email input:focus ,textarea:focus{
+    background-color: #fff;
+}
+
+label{
+    color: white;
+}rad
+
+
+.contact-button{
+    width: 90%;
+    margin: 0 auto;
+   
+}
+
+.contact-button button{
+    background-color: #2C2F37;
+    color: #fff;
+    padding: 1.5em 0;
+    border: none;
+    box-shadow: inset 0px 0px 2px 0px #a0a1a7;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    border-radius: 5px;
+    margin-right: 0.8em;
+}
+
+.sendbutton{
+        background: #e97770 url("/image/overlay.png")!important;
+}
+/*----------------------PARTIE footer-----------------------*/
+
+footer .footercontact{
+    background-color: black;
+    color: lightgrey;
+    letter-spacing: 0.2em;
+    text-align: center;
+    padding: 3em;
+    line-height: 1.5em;
+}
+
+/*---------------------Responsive----------------------------*/
+
+@media (max-width: 1100px) {
+
+.titrelocalisation{
+        left: 35%;
+        right: 35%;
+    }
+    
+    
+}
+
+
+
+@media (max-width: 600px) {
+    
+    #navbar{
+        top: 0;
+        left : 0;
+        right: 0;
+    }
+
+    header{
+        position: static;
+    }
+
+    .titrepartie { 
+        left: 30%;
+        right: 30%; 
+    }
+    
+    .titrelocalisation{
+        left: 15%;
+        right: 15%;
+    }
+    
+    #titrep{
+        font-size: 1em;
+    }
+   
+   .contactright{
+       display: none;
+   }
+   
+   .containercontact .contactleft{
+    border-right: none;
+    padding: 3em 0 0 0;
+    width: 100%;
+    margin: 0 auto;
+   }
+
+    
+  }
+  
+
+/*----------------------Animation--------------------------*/
+  
+  @keyframes slideleft {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateX(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateX(0%);
+    }
+  }
+
+  @keyframes slideright {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateX(-70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateX(0%);
+    }
+  }
+  

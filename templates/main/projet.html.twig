@@ -1,0 +1,87 @@
+{% extends 'portfolio.html.twig' %}
+{% block title %}
+    {{ title }}
+{% endblock %}
+{% block stylesheets %}
+    <!-- css -->
+    {{ encore_entry_link_tags('css/projet') }}
+{% endblock %}
+
+
+{% block body %}
+
+    <section class='selectproject row'>
+        <picture class="row col-12 mb-3 mb-lg-0 col-lg-6">
+            <img src="{{ asset('image/' ~ projet.img) }}" alt="image du projet">
+        </picture>
+        <article class="description col-12 col-lg-6">
+            <h1>{{ projet.title }}</h1>
+            <p>{{ projet.description }}</p>
+        </article>
+        <a class="linkprojet btn btn-primary" href="{{ path(projet.page) }}" role="button">Go</a>
+    </section>
+
+
+    <section class="sectioncommentaire">
+        <h1>laisse un commentaire</h1>
+
+
+        {% if app.user %}
+            <div id="formcommentaire">
+                <section class="containercommentaire">
+                    {{ form_start(form, {'attr': {'class':'commentaire-form'}}) }}
+
+
+                    <div class="commentaire-name">
+                        <label for="commentaire_commentaire" class="commentairelabel">comentaire</label>
+                        {{ form_row(form.commentaire, {'attr': {'class':'name', 'placeholder':'comment!!'}, 'label':false}) }}
+                        <p class="info_form">caractère autoriser : . ( ) : = ; &amp; # é ç è ' " - _ @ ? ! ,</p>
+                    </div>
+
+                    <div class="commentaire-button row">
+                        <button type="submit" class="sendbutton col-12 col-md-5 ">Send</button>
+                        <button type="reset" class="col-12 mt-2 col-md-5 mt-md-0">reset</button>
+                    </div>
+                    {{ form_end(form) }}
+                </section>
+            </div>
+        {% else %}
+            <p class="infoconnexion">Pour mettre un commentaire connecter vous
+                <a href="{{ path('security_login') }}">LA</a>
+            </p>
+        {% endif %}
+        {% for commentaire in projet.commentaires %}
+            <section class="commentaire">
+                <p class="info_commentaire">
+                    <span class="prenom">{{ commentaire.pseudo }}</span>
+                    <br>
+                    <a class="email" href="{{ 'mailto:' ~ commentaire.email }}">{{ commentaire.email }}</a>
+                </p>
+                <p class="textecommentaire">{{ commentaire.commentaire }}</p>
+                {% if commentaire.photo is not empty %}
+                    <div class="img-commentaire">
+                        <img src="{{ asset('imageprofile/' ~ commentaire.photo) }}" alt="">
+                    </div>
+                {% else %}
+                    <div class="img-commentaire">
+                        <img src="{{ asset('imageprofile/noprofil.png') }}" alt="">
+                    </div>
+                {% endif %}
+                {% if is_granted('ROLE_ADMIN') %}
+                    <button type="button" class="delete_com close" aria-label="Close" data-comid={{ commentaire.id }}>
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                {% endif %}
+            </section>
+        {% endfor %}
+    </section>
+
+
+{% endblock %}
+
+
+{% block javascripts %}
+
+    {{ encore_entry_script_tags('js/projet') }}
+
+{% endblock %}

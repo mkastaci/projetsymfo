@@ -1,0 +1,48 @@
+{% extends 'portfolio.html.twig' %}
+{% block title %}
+    {{ title }}
+{% endblock %}
+{% block stylesheets %}
+    <!-- css -->
+    {{ encore_entry_link_tags('css/projet') }}
+{% endblock %}
+
+{% block body %}
+
+
+    <div id="formcommentaire">
+    <h1>connexion</h1>
+        <section class="containercommentaire">
+            <form action=" {{ path('security_login') }} " method="post" class="commentaire-form row">
+
+                <div class="commentaire-name col-6">
+                    <input type="text" class="name" required name="_username" id="" placeholder="pseudo">
+                    <p class="info_form">seulement des lettres !!</p>
+                </div>
+
+
+                <div class="commentaire-email col-6">
+                    <input type="password" class="email" required name="_password" id="" placeholder="mot de passe">
+                    <p class="info_form">caractère autoriser : . ( ) : = ; &amp; # é ç è ' " - _ @ ? ! ,</p>
+                </div>
+
+
+                <div class="commentaire-button row">
+                    <button type="submit" class="sendbutton mx-auto col-12 col-md-5 ">inscription</button>
+                </div>
+
+
+            </form>
+
+        <p class="infoconnexionlogin">Si vous n'avez pas compte inscrivez vous <a href="{{ path('inscription') }}">ici</a></p>
+        </section>
+    </div>
+
+
+  
+
+
+{% endblock %}
+
+
+{% block javascripts %}{% endblock %}

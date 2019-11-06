@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta
+        http-equiv="X-UA-Compatible" content="ie=edge">
+        <!-- La balise base permet de définir l'url de la racine du site
+                ce qui permet d'utiliser des urls relatives pour toutes les ressources -->
+        <base
+        href="http://127.0.0.1:8000/" target="_self"/>
+
+        <!-- bootstrap -->
+        {{ encore_entry_link_tags('css/bootstrap') }}
+        <style>
+            .row {
+                margin: 0;
+            }
+        </style>
+        <!-- fontfamily -->
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+        <!-- fontawesome -->
+        <script src="https://kit.fontawesome.com/a9d92835b6.js" crossorigin="anonymous"></script>
+
+        <!-- reset css -->
+        {{ encore_entry_link_tags('css/reset') }}
+        <title>Portfolio -
+            {% block title %}{% endblock %}
+        </title>
+        {% block stylesheets %}{% endblock %}
+    </head>
+    <body>
+        <header>
+            <nav id="navbar">
+                <ul>
+                    <li>
+                        <a href="{{ path('main') }}">home</a>
+                    </li>
+                    <li>
+                        <a href="#intro">hello</a>
+                    </li>
+                    <li>
+                        <a href="#bio">who am i</a>
+                    </li>
+                    <li>
+                        <a href="#work">what i do</a>
+                    </li>
+                    <li>
+                        <a href="#contact">say hi</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('inscription') }}">inscription</a>
+                    </li>
+                    {% if app.user %}
+                        <li>
+                            <a href="{{ path('security_logout') }}">Déconnexion</a>
+                        </li>
+                    {% else %}
+                        <li>
+                            <a href="{{ path('security_login') }}">Connexion</a>
+                        </li>
+                    {% endif %}
+                </ul>
+            </nav>
+            <div id="titrep">
+                <h1 class="titre_acceuil">Mikail Kastaci</h1>
+                <p>Portfolio en cours de développement</p>
+            </div>
+        </header>
+
+        <main>
+            {% block body %}{% endblock %}
+        </main>
+
+        <footer>
+            <div class="footercontact">
+                <p>Contact</p>
+                <p>mail : mikailkastaci@gmail.com</p>
+                <p>téléphone : 07.83.97.58.47</p>
+            </div>
+        </footer>
+
+        {{ encore_entry_script_tags('js/jquery') }}
+        {{ encore_entry_script_tags('js/bootstrap') }}
+
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>

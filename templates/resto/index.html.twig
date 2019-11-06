@@ -1,0 +1,179 @@
+{% extends 'MarasSofrasi.html.twig' %}
+{% block title %}
+    {{ title }}
+{% endblock %}
+{% block stylesheets %}
+    <!-- css -->
+    {{ encore_entry_link_tags('css/marashome') }}
+{% endblock %}
+{% block body %}
+
+
+    <section id="nosplat">
+        <div class="container">
+
+            <section class="titre-plat">
+                <h2>Nos Plat</h2>
+                <p>Regarder Nos Plat Specialité
+                    <span>Turque</span>
+                </p>
+            </section>
+
+
+            <section class="plat row">
+                <div class="platmenu col-3">
+                    <p>type de plat</p>
+                    <ul>
+                        <li>
+                            <a href="{{ path('maras_home') ~ '#nosplat' }}" data-type="0">tous les plat</a>
+                        </li>
+                        {% for type in types %}
+                            <li>
+                                <a href="{{ path('maras_home') ~ '?type=' ~ type.id ~ '#nosplat' }}" data-type="{{ type.id }}">{{ type.name }}</a>
+                            </li>
+                        {% endfor %}
+
+                    </ul>
+                </div>
+                <div class="platimage row col-9">
+                    {% for plat in plats %}
+
+                        <picture class="imgplat col-6 col-md-4">
+                            <a href="{{ path('maras_plat', {'id' : plat.id}) }}">
+                                <img src="{{ asset('image/' ~ plat.img) }}" alt="">
+                                <div class="descimg">
+                                    <p>{{ plat.name }}
+                                        <br></p>
+                                </div>
+                            </a>
+                        </picture>
+
+                    {% endfor %}
+
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <section id="equipe">
+        <div class="container">
+
+            <section class="titre-equipe">
+                <h2>Notre Equipe</h2>
+                <p>Nos Cuisinier Et Serveur</p>
+            </section>
+
+            <section class="liste-equipe row">
+                <div class="profile col-12 mb-5 mb-md-0 col-md-4">
+                    <div class="profileimg">
+                        <img src="{{ asset('image/toriko.jpg') }}" alt="">
+                        <div class="descimg">
+                            <p>cuisinier</p>
+                        </div>
+                    </div>
+                    <h3>
+                        Toriko
+                    </h3>
+                    <p>
+                        Il est reconnu à travers le monde comme un membre des 4 grands rois bishoku-ya. Doté d'une force surhumaine et d'un odorat hors du commun, Son simple regard suffit à effrayer des bêtes féroces. Son but est de créer le menu parfait, qui serait composé de tous les meilleurs aliments existants dans le monde.
+                    </p>
+                    <div class="reseaux">
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-facebook-f"></i>
+                    </div>
+                </div>
+
+                <div class="profile col-12 mb-5 mb-md-0 col-md-4">
+                    <div class="profileimg">
+                        <img src="{{ asset('image/sanji.png') }}" alt="">
+                        <div class="descimg">
+                            <p>Serveur/Cuisinier</p>
+                        </div>
+                    </div>
+                    <h3>
+                        Sanji Vinsmoke
+                    </h3>
+                    <p>
+                        Sanji est un cuisiner très doué de 21 ans, Il surpasse tous les cuistots qu’il a rencontrés excepté peut-être son mentor, Il éprouve un profond respect pour tout ce qui concerne l’art de la cuisine. Les ingrédients, les outils, la préparation, la cuisson… tout est sacré et quiconque bafoue cette sacralité s’attire les foudres de Sanji
+                    </p>
+                    <div class="reseaux">
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-facebook-f"></i>
+                    </div>
+                </div>
+
+                <div class="profile col-12 col-md-4">
+                    <div class="profileimg">
+                        <img src="{{ asset('image/bob.jpg') }}" alt="">
+                        <div class="descimg">
+                            <p>Serveur</p>
+                        </div>
+                    </div>
+                    <h3>
+                        Bob L'éponge
+                    </h3>
+                    <p>
+                        Bob L'éponge est un cuisinier incroyable depuis tous petit il adore la cuisine, il est un expert du pâté de Krabs dont lui seul connais la recette parfaite,
+                    </p>
+                    <div class="reseaux">
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-facebook-f"></i>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+
+            <section class="titre-contact">
+                <h2>Contact</h2>
+                <p>Vous pouvez nous contacter on envoyer de nouvelle recette :)</p>
+            </section>
+
+            <section class="formcontact row">
+
+                <div class="form col-12 mb-4 mb-md-0 col-md-8">
+                    <form action="" method="get" class="form">
+                        <input type="text" name="" id="" placeholder="Nom">
+                        <input type="mail" name="" id="" placeholder="email">
+                        <textarea name="message" id="message-contact" cols="30" rows="10" placeholder="Ton Message"></textarea>
+                        <button class="mx-auto mx-md-0" type="submit">Send</button>
+                    </form>
+                </div>
+
+                <div class="infocontact col-12 text-center text-md-left col-md-4">
+                    <h3>CONTACT DETAILS</h3>
+                    <a href="mailto:">aaa@gmail.com</a>
+                    <p>07.83.97.58.47</p>
+                    <p>18 rue louise
+                        <br>
+                        district de Shiganshina
+                        <br>
+                        Ile Paradis</p>
+                </div>
+
+            </section>
+
+        </div>
+    </section>
+
+    <template id="platTemplate">
+        <picture class="imgplat col-6 col-md-4">
+            <a href="">
+                <img src="" alt="">
+                <div class="descimg">
+                    <p></p>
+                </div>
+            </a>
+        </picture>
+    </template>
+
+{% endblock %}
+
+
+{% block javascripts %}
+    {{ encore_entry_script_tags('js/marashome') }}
+{% endblock %}

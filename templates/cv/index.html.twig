@@ -1,0 +1,161 @@
+{% extends 'basecv.html.twig' %}
+
+{% block stylesheets %}
+    <!-- css -->
+    {{ encore_entry_link_tags('css/cvstyle') }}
+{% endblock %}
+
+
+{% block body %}
+
+    <main>
+        <div id="cvbody" class="row">
+            <div id="gauche" class="col-md-4">
+                <div>
+                    <h3>QUALITÉ</h3>
+                    <p>Autonome</p>
+                    <p>Ambitieux</p>
+                    <p>Volontaire</p>
+                    <p>Sociable</p>
+                </div>
+
+                <div>
+                    <h3>HOBBIES</h3>
+                    <p>
+                        <i class="fas fa-wrench"></i>Mécanique</p>
+                    <p class="description_formation">1 Mois de stage dans un garage
+                        <br>
+                        j’aime travaillez, crée avec mes mains</p>
+                    <p></p>
+                    <p>
+                        <i class="fas fa-running"></i>Sport</p>
+                    <p class="description_formation">2 ans de karaté et 3 ans de musculation</p>
+                    <p></p>
+                    <p>
+                        <i class="fas fa-car-alt"></i>Voyage</p>
+                    <p class="description_formation">Turquie(2 ans), Allemagne, Espagne,<br>
+                        Bulgarie, Croatie, Roumanie, Serbie</p>
+                    <p></p>
+                </div>
+
+                <div>
+                    <h3>COMPETENCES</h3>
+                    <p>HTML5/CSS3 ★ ★ ★ ✩ ✩</p>
+                    <p>BootStrap ★ ★ ★ ★ ✩</p>
+                    <p>PHP/MVC ★ ★ ★ ✩ ✩</p>
+                    <p>BDD-Mysql-sql ★ ★ ★ ✩ ✩</p>
+                    <p>Lumen ★ ✩ ✩ ✩ ✩</p>
+                    <p>Javascript ★ ★ ★ ✩ ✩</p>
+                    <p>Jquery ★ ★ ✩ ✩ ✩</p>
+                    <p>Wordpress ★ ✩ ✩ ✩ ✩</p>
+                    <p>Langage c ★ ★ ✩ ✩ ✩</p>
+                    <p>Anglais/lecture ★ ★ ★ ★ ✩</p>
+                    <p>Turque ★ ★ ★ ★ ★</p>
+                    <p>Français ★ ★ ★ ★ ★</p>
+                </div>
+
+                <div>
+                    <h3>LINKEDIN</h3>
+                    <a class="d-block mx-auto  mx-md-0 d-md-inline" href="https://www.linkedin.com/in/mikail-kastaci-a138a4177/"><img src="{{ asset('image/qrcodelinkedin.png') }}" alt="code qr LINKEDIN"></a>
+                </div>
+
+                <div>
+                    <h3>Portfolio</h3>
+                    <a class="d-block mx-auto mx-md-0 d-md-inline" href="{{ path('main') }}"><img src="{{ asset('image/portfolio.png') }}" alt="raccourci vers mon portfolio"></a>
+                </div>
+
+            </div>
+
+            <div
+                id="droite" class="col-md-8">
+                {#<!-- ------------Partie formation--------------- -->#}
+                <section>
+                    <h3>FORMATION</h3>
+                    <div class="formation row">
+                        <section class="date_formation col-md-1">
+                            <p>2019 2019</p>
+                        </section>
+                        <section class="col-md-11">
+                            <p class="nom_formation">O’clock – Formation en Téléprésentiel – Labellisée Grande École du Numérique</p>
+                            <p class="lieu_formation">Formation Développeur Web et Web Mobile</p>
+                            <p class="description_formation">3 mois de Socle&nbsp;: HTML5/CSS3/PHP/JavaScript/Mysql-sql</p>
+                        </section>
+                    </div>
+                    <div class="formation row">
+                        <section class="date_formation col-md-1">
+                            <p>2018 2019</p>
+                        </section>
+                        <section class="col-md-11">
+                            <p class="nom_formation">École 42 – Paris</p>
+                            <p class="lieu_formation">Développeur informatique</p>
+                            <p class="description_formation">6 mois ou j’ai fait que du langage c en autodidacte avec seulement quelques petite vidéos de 5 min a 10 min maximum
+                                Et exclusivement des projet individuel ou en duo</p>
+                        </section>
+                    </div>
+                    <div class="formation row">
+                        <section class="date_formation col-md-1">
+                            <p>2016 2018</p>
+                        </section>
+                        <section class="col-md-11">
+                            <p class="nom_formation">Lycée Edmond Michelet - Arpajon</p>
+                            <p class="lieu_formation">BTS S.N.I.R</p>
+                            <p class="description_formation">ystème numérique informatique option réseaux
+                                Programmation, html, css, langage c, QT, mise en place et installation de matériel réseaux
+                                
+                                - stage de 1 mois dans une entreprise dans la section technique ou j’avais fait un petit site vitrine de 3 pages</p>
+                        </section>
+                    </div>
+                    <div class="formation row">
+                        <section class="date_formation col-md-1">
+                            <p>2015 2016</p>
+                        </section>
+                        <section class="col-md-11">
+                            <p class="nom_formation">Lycée Rosa Parks - Montgeron</p>
+                            <p class="lieu_formation">BAC général technologique S.T.I.2.D</p>
+                            <p class="description_formation">Spécialité S.I.N (système informatique numérique)
+                                programmation, code, programmation embarqué (langage c sur Arduino)</p>
+                        </section>
+                    </div>
+                </section>
+                {# ------------Partie Experience Pro--------------- -->#}
+                <section>
+                    <h3>EXPERIENCES PRO</h3>
+                    <div class="emploie row">
+                        <section class="date_emploie col-md-1">
+                            <p>2018 2018</p>
+                        </section>
+                        <section class="col-md-11">
+                            <p class="nom_emploie">Intérimaire</p>
+                            <p class="lieu_emploie">Human-Recrute, Savigny-le-temple</p>
+                            <p class="description_emploie">manutentionnaire, préparateur de commande</p>
+                        </section>
+                    </div>
+                    <div class="emploie row">
+                        <section class="date_emploie col-md-1">
+                            <p>2016 2017</p>
+                        </section>
+                        <section class="col-md-11">
+                            <p class="nom_emploie">Employé Polyvalent</p>
+                            <p class="lieu_emploie">Dominos pizza, Vigneux sur seine</p>
+                            <p class="description_emploie">cuisinier, caissier, ménage, gestion de la clientèle, livraison</p>
+                        </section>
+                    </div>
+                    <div class="emploie row">
+                        <section class="date_emploie col-md-1">
+                            <p>2015 2016</p>
+                        </section>
+                        <section class="col-md-11">
+                            <p class="nom_emploie">Chauffeur VTC</p>
+                            <p class="lieu_emploie">Heetch, Paris</p>
+                            <p class="description_emploie">Conducteur, sens de l’organisation, autonomie</p>
+                        </section>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+{% endblock %}
+
+
+{% block javascripts %}{% endblock %}

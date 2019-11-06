@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta
+        http-equiv="X-UA-Compatible" content="ie=edge">
+        <!-- La balise base permet de définir l'url de la racine du site
+                                ce qui permet d'utiliser des urls relatives pour toutes les ressources -->
+        <base
+        href="http://127.0.0.1:8000/" target="_self"/>
+
+        <!-- bootstrap -->
+        {{ encore_entry_link_tags('css/bootstrap') }}
+        <style>
+            .row {
+                margin: 0;
+            }
+        </style>
+        <!-- fontfamily -->
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet">
+        <link
+        href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+        <!-- fontawesome -->
+        <script src="https://kit.fontawesome.com/a9d92835b6.js" crossorigin="anonymous"></script>
+
+        <!-- reset css -->
+        {{ encore_entry_link_tags('css/reset') }}
+        <title>Kastaci mikail CV
+            {% block title %}{% endblock %}
+        </title>
+        {% block stylesheets %}{% endblock %}
+    </head>
+    <body>
+        <header>
+            <h1 class="col-12 offset-md-4 col-md-6">Kastaci Mikail</h1>
+            <div class="headercontactbordure row">
+                <img class="headercontactimg col-6 offset-md-1 col-md-1 offset-lg-2 col-lg-1" src="{{ asset('image/image_cv.jpg') }}" alt="image profil cv">
+                <div class="headercontacttext col-6 col-md-8 offset-lg-1 col-lg-6">
+                    <h3>Contact</h3>
+                    <p>
+                        <i class="fas fa-mobile-alt"></i>Tel : 07 83 97 58 47</p>
+                    <p>
+                        <i class="far fa-envelope"></i>Mail : mikailkastaci@gmail.com</p>
+                    <p>
+                        <i class="fas fa-map-marker-alt"></i>Adresse : 18 Rue Henri Martin</p>
+                    <p>
+                        <i class="far fa-building"></i>Ville : Vigneux-Sur-Seine</p>
+                    <p>
+                        <i class="far fa-calendar-alt"></i>Date de naissance : 17/11/1997</p>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            {% block body %}{% endblock %}
+        </main>
+
+        <footer></footer>
+
+        {{ encore_entry_script_tags('js/jquery') }}
+        {{ encore_entry_script_tags('js/bootstrap') }}
+
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>

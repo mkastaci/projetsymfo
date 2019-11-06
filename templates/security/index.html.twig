@@ -1,0 +1,47 @@
+{% extends 'portfolio.html.twig' %}
+{% block title %}
+    {{ title }}
+{% endblock %}
+{% block stylesheets %}
+    <!-- css -->
+    {{ encore_entry_link_tags('css/projet') }}
+{% endblock %}
+
+{% block body %}
+
+    <div id="formcommentaire">
+        <section class="containercommentaire">
+            {{ form_start(form, {'multipart': 'true', 'attr': {'class': 'commentaire-form row'}}) }}
+
+            <div class="commentaire-name col-6">
+                {{ form_row(form.username, {'attr': {'class': 'name', 'placeholder': 'ton pseudo'}, 'label': false}) }}
+                <p class="info_form">seulement des lettres chiffre!!</p>
+            </div>
+
+
+            <div class="commentaire-email col-6">
+                {{ form_row(form.email, {'label':false,'attr':{'placeholder':'ton mail','class':'email'}}) }}
+            </div>
+
+
+            <div class="commentaire-message col-12">
+                {{ form_row(form.password, {'label':false,'attr':{'placeholder':'mot de passe','class':'message'}}) }}
+                <p class="info_form">seulement des lettres ou des chiffre!!</p>
+            </div>
+
+            {{ form_row(form.photo, {'label':'photo de profile','attr':{'class':'message'}}) }}
+
+            <div class="commentaire-button row">
+            <button type="submit" class="sendbutton col-12 col-md-5 ">inscription</button>
+            </div>
+
+
+            {{ form_end(form) }}
+
+        </section>
+    </div>
+
+{% endblock %}
+
+
+{% block javascripts %}{% endblock %}

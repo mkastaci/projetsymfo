@@ -1,0 +1,39 @@
+{% extends 'MarasSofrasi.html.twig' %}
+{% block title %}
+    {{ title }}
+{% endblock %}
+{% block stylesheets %}
+    <!-- css -->
+    {{ encore_entry_link_tags('css/marasplat') }}
+{% endblock %}
+
+
+{% block body %}
+
+    <section class="selectplat row">
+        <picture class="row col-12 mb-3 mb-lg-0 col-lg-6">
+            <img src="{{ asset('image/' ~ plat.img) }}" alt="image du projet">
+                        
+        </picture>
+
+        <article class="description col-12 col-lg-6">
+            <h1>{{ plat.name }}</h1>
+            <p>{{ plat.description }}</p>
+        </article>
+
+        <section class="panier">
+            <form action="{{ path('maras_addpanier', {'id' : plat.id}) }}" method="post" class="achat">
+                <input type="number" id="nbplat" name="nbplat" min="1" max="10" value="1" required>
+                <p class="prix">{{ plat.price }}&#8364;</p>
+                <button type="submit">
+                    <i class="fas fa-cart-plus"></i>
+                </button>
+            </form>
+        </section>
+    </section
+
+
+{% endblock %}
+
+{% block javascripts %}{% endblock %}
+

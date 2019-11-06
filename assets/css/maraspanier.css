@@ -1,0 +1,128 @@
+main, footer{
+    background-color: #2F3238;
+}
+
+
+html{
+    font-family: 'Titillium Web', sans-serif;
+}
+
+
+a:hover{
+    text-decoration: none;
+    color: #DE5E60;
+}
+/*------------------------------HEADER--------------------------------------*/
+
+header{
+    overflow: hidden;
+    
+}
+.flexslider{
+    height: 100vh;
+    border: none;
+    margin: 0;
+    
+}
+.flexslider .slides img {
+    height: 100vh;
+    filter: brightness(70%);
+    
+}
+
+.flexslider .slides li{
+    position: relative;
+}
+.flexslider .slides h1{
+    position: absolute;
+    text-align: center;
+    font-size: 2.5em;
+    font-family: "Times New Roman";
+    font-weight: 1000;
+    text-transform: uppercase;
+    color: black;
+    letter-spacing: 0.25em;
+    top: 20%; /* poussé de la moitié de hauteur du référent */
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.flexslider .slides h1 span{
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    
+    letter-spacing: 0.2em;
+    font-size: 0.5em;
+    margin: 1.25em 0px 0px;
+}
+
+/*------------------HEADER MENU------------------------------*/
+
+
+.menu{
+    padding: 2em 0 0 0 ;
+    background-color: #2F3238;
+}
+
+.menu div{
+    color: white;
+    background-color: #26292E;
+    display: flex;
+    justify-content: space-between;
+    padding: 1em 2em;
+}
+
+
+.menu div ul{
+    display: flex;
+    justify-content: space-around
+}
+.menu div ul li{
+    margin: 0 0.5em;
+    font-size: 16x;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+
+
+/*------------------PAGE PANIER------------------------------*/
+.table-panier{
+    padding: 2em 0;
+    width: 100%;
+    border: 1px solid grey;
+}
+th,td{
+   border: 1px solid grey;
+   padding: 0.5em 0;
+   color: white;
+}
+
+th{
+   background-color: #2C2F37;
+   text-align: left;
+   font-weight: bold;
+   font-size: 2em;
+}
+
+
+
+
+
+/*---------------FOOTER----------------------------*/
+footer{
+    background-color: #26292E;
+    text-align: center;
+}
+
+.footerp{
+    color: #FFFFFF;
+    font-size: 13px;
+    margin-bottom: 0;
+    padding: 20px 0;
+    text-transform: uppercase;
+}
+
+.footerp span{
+    color: #DE5E60;
+}

@@ -1,0 +1,44 @@
+{% extends 'MarasSofrasi.html.twig' %}
+{% block title %}
+    {{ title }}
+{% endblock %}
+{% block stylesheets %}
+    <!-- css -->
+    {{ encore_entry_link_tags('css/maraspanier') }}
+{% endblock %}
+
+
+{% block body %}
+
+    <div class="container-panier">
+        <section
+            class="panier">
+
+            <table class="table-panier table-striped">
+                <thead>
+                    <tr>
+                        <th>article</th>
+                        <th>quantité</th>
+                        <th>prix</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    {% if panier|length > 0 %}
+                        {% for article in panier %}
+                            <tr>
+                                <td>{{ article.article.name }}</td>
+                                <td>{{ article.quantity }}</td>
+                                <td>{{ article.article.price * article.quantity }}&#8364;   <a href="{{ path('maras_removepanier', {id:article.article.id}) }}"><i class="far fa-trash-alt"></i></a> </td>
+                            </tr>
+                        {% endfor %}
+                        <tr>
+                            <td colspan="2"> TOTAL : </td> 
+                            <td> {{ total }}&#8364; </td> 
+                        </tr>
+                    {% endif %}
+                </tbody>
+            </table>
+        </div>
+    </section>
+</div>{% endblock %}{% block javascripts %}{% endblock %}

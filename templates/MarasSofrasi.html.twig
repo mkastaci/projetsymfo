@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta
+        http-equiv="X-UA-Compatible" content="ie=edge">
+        <!-- La balise base permet de définir l'url de la racine du site ce qui permet d'utiliser des urls relatives pour toutes les ressources -->
+        <base
+        href="http://127.0.0.1:8000/" target="_self"/>
+
+        <!-- bootstrap -->
+        {{ encore_entry_link_tags('css/bootstrap') }}
+        <style>
+            .row {
+                margin: 0;
+            }
+        </style>
+        <!-- Flexslider -->
+        {{ encore_entry_link_tags('css/flexslider') }}
+        <!-- fontfamily -->
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet">
+        <link
+        href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+        <!-- fontawesome -->
+        <script src="https://kit.fontawesome.com/a9d92835b6.js" crossorigin="anonymous"></script>
+
+        <!-- reset css -->
+        {{ encore_entry_link_tags('css/reset') }}
+        <title>MarasSofrasi -
+            {% block title %}{% endblock %}
+        </title>
+        {% block stylesheets %}{% endblock %}
+    </head>
+    <body>
+        <header>
+            <section id="header" class="flexslider homeslider">
+                <ul class="slides">
+                    <li>
+                        <img src="{{ asset('image/resto_home.jpg') }}"/>
+                        <h1>Maraş Sofrasi
+                            <br>
+                            <span>Plat specialité turque</span>
+                        </h1>
+                    </li>
+                    <li>
+                        <img src="{{ asset('image/plat.png') }}"/>
+                    </li>
+                    <li>
+                        <img src="{{ asset('image/borek.JPG') }}"/>
+                    </li>
+                </ul>
+            </section>
+
+            <nav class="menu">
+                <div>
+                    <p>MS</p>
+                    <ul>
+                        <li><a href="{{ path('maras_home') }}">home</a></li>
+                        <li><a href="{{ path('maras_home') ~ '#nosplat' }}">nos plats</a></li>
+                        <li><a href="{{ path('maras_home') ~ '#equipe' }}">équipe</a></li>
+                        <li><a href="{{ path('maras_home') ~ '#contact' }}">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            {% block body %}{% endblock %}
+        </main>
+
+        <footer>
+            <p class="footerp">
+                2019
+                <span>Maras Sofrasi</span>
+                by
+                <span>Mkastaci</span>
+            </p>
+        </footer>
+
+        {{ encore_entry_script_tags('js/jquery') }}
+        {{ encore_entry_script_tags('js/bootstrap') }}
+        {{ encore_entry_script_tags('js/flexslider') }}
+
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>

@@ -1,0 +1,305 @@
+body{
+    font-family: 'Roboto','Noto Sans', sans-serif;
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+/*----------------------PARTIE HEADER-----------------------*/
+header{
+    background: url("/image/banner.jpg");
+    height: 38em;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+#titrep{
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    top: 1.5em;
+    
+}
+
+#titrep h1{
+    font-size: 2em;
+    font-family: "Times New Roman";
+    font-weight: 900;
+    text-transform: uppercase;
+    color: rgb(255, 255, 255);
+    letter-spacing: 0.25em;
+}
+
+#titrep p{
+    color: rgba(255, 255, 255, 0.5);
+    text-transform: uppercase;
+    display: block;
+    letter-spacing: 0.2em;
+    font-size: 0.5em;
+    margin: 1.25em 0px 0px
+}
+
+
+#navbar{
+    position: absolute;
+    top: 2.5em;
+    width: 100%;
+    text-align: center;
+    
+}
+
+#navbar ul{
+    display: inline-block;
+    border-radius: 0.35em;
+    box-shadow: inset 0px 0px 1px 1px rgba(255, 255, 255, 0.25);
+    padding: 0 1.5em 0 1.5em;
+}
+
+#navbar li{
+    display: inline-block;
+    
+    padding: 0 1.5em 0 1.5em;
+}
+
+#navbar li a{
+    display: block;
+    color: rgba(255, 255, 255, 0.75);
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 0.7em;
+    letter-spacing: 0.25em;
+    height: 5em;
+    line-height: 5em;
+    transition: all .25s ease-in-out;
+}
+
+#navbar li a:hover{
+    transform: translate(5px, 5px);
+}
+
+
+/*-----------------------------------------PAGE PROJET---------------------------------------------------------------*/
+
+.selectproject{
+    padding: 3em 0;
+    background: #f3f3f3 url("/image/overlay.png");
+    
+}
+
+.selectproject h1{
+    font-weight: bold;
+    font-size: 2em;
+    padding-bottom: 1em;
+    color: #485461;
+}
+
+.selectproject picture{
+    align-items: center;
+}
+
+.selectproject picture img{
+    width: 100%;
+    height: 450px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 19px 0px rgba(46,74,117,1);
+}
+
+
+
+.selectproject .description{
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.linkprojet{
+    margin: 0 auto;
+    width: 100px;
+    margin-top: 2em;
+}
+
+/*-----------------------------------------PAGE PROJET COMMENTAIRE------------------------------------------------*/
+
+.sectioncommentaire{
+    background: #f3f3f3 url("/image/overlay.png");
+    border-top: 2px solid black;
+    padding: 1em 0;
+}
+
+.sectioncommentaire h1{
+    text-align: center;
+    font-weight: bold;
+
+}
+
+.commentaire{
+border: 1px solid black;
+width: 50%;
+margin: 2em auto;
+border-radius: 10px;
+text-align: center;
+position: relative;
+}
+
+
+.prenom{
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.email, .info_form{
+    color: #999;
+    font-size: .7em;
+}
+
+.info_commentaire{
+    margin-bottom: 1.5em;
+}
+
+.delete_com{
+    position: absolute;
+    right: 0;
+    top: 30%;
+    bottom: 30%;
+}
+
+/*----------------------------PARTIE FORMULAIRE COMMENTAIRE-----------------------*/
+#formcommentaire{
+    background-color: #2C2F37;
+    position: relative;
+    padding: 2em 0;
+    width: 90%;
+    margin: 1em auto;
+    border-radius: 20px;
+}
+
+#formcommentaire h1{
+    text-align: center;
+    font-size: 1.5em;
+    letter-spacing: 5px;
+    padding-bottom: 2em;
+    color: white;
+}
+
+.containercommentaire{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.commentaire-form li{
+    color: red;
+}
+.commentaire-form div{
+    margin-bottom: 1em; 
+}
+
+.commentaire-name input, .commentaire-email input ,textarea, .message{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 14pt;
+    letter-spacing: 0.025em;
+    width: 100%;
+    background-color: #ccc;
+    border: none;
+    padding: 1em 0 1em 0.5em;
+    border-radius: 0.35em;
+    transition: all .25s ease-in-out;
+}
+
+.commentaire-name input:focus, .commentaire-email input:focus ,textarea:focus, #message:focus, .message:focus{
+    background-color: #fff;
+}
+
+
+.commentaire-button{
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+.commentaire-button button{
+    background-color: #2C2F37;
+    color: #fff;
+    padding: 1.5em 0;
+    border: none;
+    box-shadow: inset 0px 0px 2px 0px #a0a1a7;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    border-radius: 5px;
+    margin-right: 0.8em;
+}
+
+.sendbutton{
+        background: #e97770 url("/image/overlay.png")!important;
+}
+
+.commentairelabel{
+    color: white;
+    padding: 0.2em;
+}
+
+.infoconnexionlogin {
+    color: white;
+}
+
+.infoconnexion a, .infoconnexionlogin a {
+    color: rgb(224, 96, 96);
+}
+
+.img-commentaire{
+    position: absolute;
+    left: -20%;
+    top: 0;
+    bottom: 0;
+    right: 100%;
+}
+.img-commentaire img{
+    width: auto;
+    height: auto;
+    width: 100%;
+    height: 100%;
+    border-radius: 70px;
+}
+/*----------------------PARTIE footer-----------------------*/
+
+footer .footercontact{
+    background-color: black;
+    color: lightgrey;
+    letter-spacing: 0.2em;
+    text-align: center;
+    padding: 3em;
+    line-height: 1.5em;
+}
+
+
+/*---------------------Responsive----------------------------*/
+
+@media (max-width: 600px) {
+    #navbar{
+        top: 0;
+        left : 0;
+        right: 0;
+    }
+
+    header{
+        position: static;
+    }
+
+    .selectproject picture img{
+        width: 100%;
+        height: 250px;
+    }
+    
+        #titrep{
+        font-size: 1em;
+    }
+
+
+    
+  }
+  
